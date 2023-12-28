@@ -10,6 +10,7 @@ UPLOAD_FOLDER = "./uploads"
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024 
 
 def allowed_file(filename):
     return '.' in filename and \
